@@ -12,6 +12,7 @@ export default function InputData() {
     const onAdd = () => {
         if (info !== '') {
             dispatch(textAction.add(info));
+            setInfo('');
         }
     }
 
