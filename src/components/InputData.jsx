@@ -20,7 +20,7 @@ export default function InputData() {
             <FormControl type="text" value={info} onChange={handleChange}
                          placeholder="Please add task"
                          className='form-control'/>
-            <Button onClick={onAdd}>ADD</Button>
+            <Button onClick={onAdd} disabled={info === ''}>ADD</Button>
         </>
     );
 }
