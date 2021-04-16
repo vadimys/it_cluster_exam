@@ -7,7 +7,11 @@ export default function text(state = {data: []}, action) {
         data: [...state.data, action.message]
       };
     case types.REMOVE:
-      return {data: []};
+      let newData = state.data;
+
+      newData.splice(Number(action.message), 1);
+
+      return {data: [...newData]};
     default:
       return state;
   }
